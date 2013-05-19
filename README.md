@@ -10,7 +10,8 @@ This fork was developed by Ryan Moore simply to bring this library up to date
 with the latest versions of jQuery and Raphael. Some of the documentation here
 describes plans that never came to fruition (e.g., ``That API will be changing
 shortly.''). I have left the original documentation mostly in tact. As of this
-writing, the original version hadn't been modified in about 3 years.
+writing, the original version hadn't been modified in about 3 years. Some
+glitches remain, particularly after moving around nodes.
 
 Have any examples?
 ==================
