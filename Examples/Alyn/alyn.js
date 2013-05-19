@@ -19,9 +19,11 @@ $(document).ready(function() {
 			
 			node.addPoint(input, 'in', multi);
 		}
-		for(var i in outputs)
-			if(outputs[i] != '')
+		for(var i in outputs) {
+			if(outputs[i] != '') {
 				node.addPoint(outputs[i], 'out');
+			}
+		}
 		
 		audioGraph.addNode(x, y, node);
 	}
