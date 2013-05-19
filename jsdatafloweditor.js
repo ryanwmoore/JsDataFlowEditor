@@ -155,6 +155,7 @@ function graphEditor(id, width, height, theme) {
 	this.raphael = Raphael(id, width, height);
 	this.nodes = [];
 	this.selected = null;
+	this.id = "#" + id;
 	
 	return true;
 }
@@ -171,10 +172,13 @@ graphEditor.prototype.rigConnections = function(point) {
 				beginning = other.circle;
 				point.removeConnection(sthis.raphael, other);
 				connecting = other;
-			} else
+			} else {
 				connecting = point;
+			}
+
 			var line = sthis.raphael.connection(connecting.circle, circle, sthis.theme.connectingFill, sthis.theme.connectingStroke + '|' + sthis.theme.connectingStrokeWidth);
-			var jo = $(sthis.raphael.element);
+			var jo = $(sthis.id);
+
 			var mouseup = function() {
 				circle.remove();
 				sthis.raphael.removeConnection(line);
